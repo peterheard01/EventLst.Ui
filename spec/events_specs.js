@@ -5,7 +5,7 @@ describe("event specs : ", function () {
 
     it('do test', inject(function () {
 
-        expect("").toBe("");
+        expect("1").toBe("1");
 
     }))
 
