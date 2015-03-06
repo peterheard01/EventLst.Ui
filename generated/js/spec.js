@@ -3239,4 +3239,17 @@ site: https://github.com/searls/jasmine-fixture
 
 }).call(this);
 
+describe("event specs : ", function () {
+
+    beforeEach(module('app'));
+    beforeEach(module('app.services'));
+
+    it('do test', inject(function () {
+
+        expect("").toBe("");
+
+    }))
+
+})
+
 //# sourceMappingURL=spec.js.map
