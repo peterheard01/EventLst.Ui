@@ -59255,6 +59255,51 @@ angular.module('app.controllers').controller('ResourceController',
 
     });
 
+angular.module('app.services')
+	.service('Browser', function () {
+
+		function _getUserLatitude() {
+
+		}
+
+		function _getUserLongitude() {
+
+		}
+
+		return {
+			getUserLatitude : _getUserLatitude,
+			getUserLongitude : _getUserLongitude
+		};
+
+	});
+
+angular.module('app.services')
+	.service('EventFetcher', function (LocationDetailsModel, Browser) {
+
+		function _fetch() {
+			LocationDetailsModel.lat = Browser.getUserLatitude();
+			LocationDetailsModel.lat = Browser.getUserLongitude();
+		}
+
+		return {
+			fetch: _fetch
+		};
+
+	});
+
+angular.module('app.services')
+	.service('LocationDetailsModel', function () {
+
+		function _fetch() {
+
+		}
+
+		return {
+			fetch: _fetch
+		};
+
+	});
+
 angular.module('app.services').service('HomeService',
     function() {
 

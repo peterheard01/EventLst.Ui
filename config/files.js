@@ -12,9 +12,7 @@ module.exports = function(lineman) {
       ],
       app: [
         "app/js/app.js",
-        "app/js/controllers/**/*.js",
-        "app/js/services/**/*.js",
-        "app/js/directives/**/*.js"
+        "app/js/**/*.js"
       ]
     },
 
