@@ -5,9 +5,20 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "\n" +
     "    <p id=\"demo\"></p>\n" +
     "\n" +
-    "    <div ng-repeat=\"event in vm.localEvents\">\n" +
-    "        {{event.Name}}\n" +
-    "    </div>\n" +
+    "    <table>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "            <tr  ng-repeat=\"event in vm.localEvents\">\n" +
+    "                <td>{{event.Name}}</td>\n" +
+    "                <td>{{event.City}}</td>\n" +
+    "                <td>{{event.DateAndTime}}</td>\n" +
+    "            </tr>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "    </table>\n" +
     "\n" +
     "    <geo-location-directive></geo-location-directive>\n" +
     "\n" +

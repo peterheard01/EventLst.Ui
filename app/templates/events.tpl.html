@@ -2,9 +2,20 @@
 
     <p id="demo"></p>
 
-    <div ng-repeat="event in vm.localEvents">
-        {{event.Name}}
-    </div>
+    <table>
+
+
+
+            <tr  ng-repeat="event in vm.localEvents">
+                <td>{{event.Name}}</td>
+                <td>{{event.City}}</td>
+                <td>{{event.DateAndTime}}</td>
+            </tr>
+
+
+
+
+    </table>
 
     <geo-location-directive></geo-location-directive>
 

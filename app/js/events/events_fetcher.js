@@ -21,7 +21,15 @@ angular.module('app.services')
 
 				EventsModel.events.push(modelItem);
 
-				EventsViewModel.localEvents.push(modelItem);
+				//modelItem.DateAndTime = modelItem.DateAndTime.format("dddd, MMMM Do YYYY, h:mm:ss a");
+
+				var viewModelItem = {};
+				viewModelItem.Name = dtoItem.Name;
+				viewModelItem.DateAndTime = moment(dtoItem.DateAndTime).format("dddd, MMMM Do YYYY, h:mm:ss a");;
+				viewModelItem.City = dtoItem.City;
+				viewModelItem.HtmlDescription = dtoItem.HtmlDescription;
+
+				EventsViewModel.localEvents.push(viewModelItem);
 
 			});
 
