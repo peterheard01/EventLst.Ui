@@ -56,19 +56,18 @@ describe("event fetcher specs : ", function () {
 
 	}))
 
-	it('items are mapped', inject(function (EventFetcher,EventsModel) {
+	it('items are mapped to model', inject(function (EventFetcher,EventsModel) {
 
 		EventFetcher.fetch();
 
-
 		expect(EventsModel.events[3].Name).toBe('Event 4');
-		expect(EventsModel.events[3].DateAndTime).toBe('2015-03-10T18:00:00Z');
+		expect(EventsModel.events[3].DateAndTime).toEqual(moment("2015-03-10T18:00:00Z", moment.ISO_8601));
 		expect(EventsModel.events[3].City).toBe('Reading, RG2 7AU');
 		expect(EventsModel.events[3].HtmlDescription).toBe("<p>I am event 4</p>");
 
 	}))
 
-	//will check the data is mapped
+
 	//will check the date is then mapped to a viewmodel
 
 

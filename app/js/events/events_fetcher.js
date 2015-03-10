@@ -16,7 +16,12 @@ angular.module('app.services')
 
 				var modelItem = {}
 				modelItem.Name = dtoItem.Name;
-				modelItem.DateAndTime = dtoItem.DateAndTime;
+
+				//var x = moment(dtoItem.DateAndTime);
+
+				//console.log(x);
+
+				modelItem.DateAndTime = moment(dtoItem.DateAndTime);
 				modelItem.City = dtoItem.City;
 				modelItem.HtmlDescription = dtoItem.HtmlDescription;
 
