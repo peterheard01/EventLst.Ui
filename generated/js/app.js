@@ -69067,7 +69067,7 @@ angular.module('app.services')
 	});
 
 angular.module('app.services')
-	.service('EventFetcher', function (LocationDetailsModel, Browser, EventCaller, EventsModel) {
+	.service('EventFetcher', function (LocationDetailsModel, Browser, EventCaller, EventsModel, EventsViewModel) {
 
 		function _fetch() {
 
@@ -69079,23 +69079,19 @@ angular.module('app.services')
 
 		function _fetchSuccess(cleanDto){
 
-
 			angular.forEach(cleanDto,function(dtoItem){
 
-				var modelItem = {}
+				var modelItem = {};
 				modelItem.Name = dtoItem.Name;
-
-				//var x = moment(dtoItem.DateAndTime);
-
-				//console.log(x);
-
 				modelItem.DateAndTime = moment(dtoItem.DateAndTime);
 				modelItem.City = dtoItem.City;
 				modelItem.HtmlDescription = dtoItem.HtmlDescription;
 
 				EventsModel.events.push(modelItem);
 
-			})
+				EventsViewModel.localEvents.push(modelItem);
+
+			});
 
 		}
 
@@ -69110,6 +69106,15 @@ angular.module('app.services')
 
 		return {
 			events : []
+		};
+
+	});
+
+angular.module('app.services')
+	.service('EventsViewModel', function () {
+
+		return {
+			localEvents : []
 		};
 
 	});
