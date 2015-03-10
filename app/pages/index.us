@@ -4,18 +4,9 @@
     <title><%= pkg.name %></title>
     <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
 </head>
-<body ng-controller="HomeController">
-
-<a href="/#/home">home</a><br>
-<a href="/#/bootstrap">bootstrap examples</a><br>
-<a href="/#/resource">resource examples</a><br>
-<a href="/#/angularbootstrap">angular bootstrap</a><br>
-<a href="/#/fontawesome">font awesome</a><br>
-<a href="/#/examples">examples</a><br>
-
+<body>
 
 <div id="view" ng-view></div>
-
 
 </body>
 <script type="text/javascript" src="/js/app.js"></script>

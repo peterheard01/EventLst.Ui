@@ -3,8 +3,8 @@ angular.module('app.services')
 
 		function _fetch() {
 
-			LocationDetailsModel.lon = Browser.getUserLatitude();
-			LocationDetailsModel.lat = Browser.getUserLongitude();
+			LocationDetailsModel.lon = Browser.longitude;
+			LocationDetailsModel.lat = Browser.latitude;
 
 			EventCaller.getEvents(_fetchSuccess, LocationDetailsModel.lon, LocationDetailsModel.lat);
 		}

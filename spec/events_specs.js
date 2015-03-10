@@ -5,16 +5,11 @@ describe("event fetcher specs : ", function () {
 
 	var browserStub, eventCallerStub;
 
-
 	beforeEach(module(function ($provide) {
 
 		browserStub = {
-			getUserLatitude: function () {
-				return "51.22222";
-			},
-			getUserLongitude: function () {
-				return "51.11111";
-			}
+				longitude : "51.22222",
+				latitude : "51.11111"
 		};
 
 		eventCallerStub = {

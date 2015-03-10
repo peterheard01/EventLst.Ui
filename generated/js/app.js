@@ -68900,23 +68900,9 @@ app = angular.module('app', ['ngRoute', 'ngResource','app.services','app.control
 
     $locationProvider.html5Mode(true);
 
-    $routeProvider.when('/fontawesome', {
-      templateUrl: 'fontawesome.html'
-    });
-    $routeProvider.when('/angularbootstrap', {
-        templateUrl: 'angularbootstrap.html'
-    });
-    $routeProvider.when('/resource', {
-        templateUrl: 'resource.html'
-    });
-    $routeProvider.when('/bootstrap', {
-        templateUrl: 'bootstrap.html'
-    });
-  $routeProvider.when('/examples', {
-    templateUrl: 'examples.html'
-  });
-//
-//    $routeProvider.otherwise({ redirectTo: '/' });
+		$routeProvider.when('/', {
+			templateUrl: 'events.tpl.html'
+		});
 
 });
 
@@ -69051,28 +69037,66 @@ angular.module('app.controllers').controller('ResourceController',
 angular.module('app.services')
 	.service('Browser', function () {
 
-		function _getUserLatitude() {
-
-		}
-
-		function _getUserLongitude() {
-
-		}
-
 		return {
-			getUserLatitude : _getUserLatitude,
-			getUserLongitude : _getUserLongitude
+			longitude : null,
+			latitude : null
 		};
 
 	});
+
+angular.module('app.directives').directive('geoLocationDirective', function() {
+	return {
+		restrict: 'AE',
+		replace: true,
+		template: '<div></div>',
+		//compile: function(elem, attrs) {
+		//
+		//	console.log('compiling');
+		//
+		//	return function(scope, elem, attrs){
+		//
+		//		console.log('linking');
+		//	};
+		//
+		//},
+		controller: function($scope, EventFetcher) {
+
+			navigator.geolocation.getCurrentPosition(showPosition);
+
+			function showPosition(position) {
+
+				Browser.longitude = position.coords.longitude;
+				Browser.latitude = position.coords.latitude;
+
+				console.log(position.coords.latitude);
+				console.log(position.coords.longitude);
+
+				EventFetcher.fetch();
+
+				//x.innerHTML = "Latitude: " + position.coords.latitude +
+				//"<br>Longitude: " + position.coords.longitude;
+			}
+
+		}
+	};
+});
+
+angular.module('app.controllers').controller('EventsController',
+    function($scope, EventsViewModel) {
+
+			$scope.vm = EventsViewModel;
+
+
+
+    });
 
 angular.module('app.services')
 	.service('EventFetcher', function (LocationDetailsModel, Browser, EventCaller, EventsModel, EventsViewModel) {
 
 		function _fetch() {
 
-			LocationDetailsModel.lon = Browser.getUserLatitude();
-			LocationDetailsModel.lat = Browser.getUserLongitude();
+			LocationDetailsModel.lon = Browser.longitude;
+			LocationDetailsModel.lat = Browser.latitude;
 
 			EventCaller.getEvents(_fetchSuccess, LocationDetailsModel.lon, LocationDetailsModel.lat);
 		}
@@ -69157,36 +69181,13 @@ angular.module('app.services').service('HomeService',
 
 angular.module("app").run(["$templateCache", function($templateCache) {
 
-  $templateCache.put("bootstrapaccordian.tpl.html",
-    "<div ng-controller=\"AccordionDemoCtrl\">\n" +
-    "    <p>\n" +
-    "        <button class=\"btn btn-default btn-sm\" ng-click=\"status.open = !status.open\">Toggle last panel</button>\n" +
-    "        <button class=\"btn btn-default btn-sm\" ng-click=\"status.isFirstDisabled = ! status.isFirstDisabled\">Enable / Disable first panel</button>\n" +
-    "    </p>\n" +
+  $templateCache.put("events.tpl.html",
+    "<div ng-controller=\"EventsController\">\n" +
     "\n" +
-    "    <label class=\"checkbox\">\n" +
-    "        <input type=\"checkbox\" ng-model=\"oneAtATime\">\n" +
-    "        Open only one at a time\n" +
-    "    </label>\n" +
-    "    <accordion close-others=\"oneAtATime\">\n" +
-    "        <accordion-group heading=\"Static Header, initially expanded\" is-open=\"status.isFirstOpen\" is-disabled=\"status.isFirstDisabled\">\n" +
-    "            This content is straight in the template.\n" +
-    "        </accordion-group>\n" +
-    "        <accordion-group heading=\"{{group.title}}\" ng-repeat=\"group in groups\">\n" +
-    "            {{group.content}}\n" +
-    "        </accordion-group>\n" +
-    "        <accordion-group heading=\"Dynamic Body Content\">\n" +
-    "            <p>The body of the accordion group grows to fit the contents</p>\n" +
-    "            <button class=\"btn btn-default btn-sm\" ng-click=\"addItem()\">Add Item</button>\n" +
-    "            <div ng-repeat=\"item in items\">{{item}}</div>\n" +
-    "        </accordion-group>\n" +
-    "        <accordion-group is-open=\"status.open\">\n" +
-    "            <accordion-heading>\n" +
-    "                I can have markup, too! <i class=\"pull-right glyphicon\" ng-class=\"{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}\"></i>\n" +
-    "            </accordion-heading>\n" +
-    "            This is just some content to illustrate fancy headings.\n" +
-    "        </accordion-group>\n" +
-    "    </accordion>\n" +
+    "    <p id=\"demo\"></p>\n" +
+    "\n" +
+    "    <geo-location-directive></geo-location-directive>\n" +
+    "\n" +
     "</div>"
   );
 
