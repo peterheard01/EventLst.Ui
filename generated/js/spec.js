@@ -3276,7 +3276,7 @@ describe("event fetcher specs : ", function () {
 	beforeEach(module('app'));
 	beforeEach(module('app.services'));
 
-	var browserStub, eventCallerStub;
+	var browserStub, eventsCallerStub;
 
 	beforeEach(module(function ($provide) {
 
@@ -3285,14 +3285,14 @@ describe("event fetcher specs : ", function () {
 				latitude : "51.11111"
 		};
 
-		eventCallerStub = {
+		eventsCallerStub = {
 			getEvents : function(success, lon, lat){
 				success(eventsStub);
 			}
 		}
 
 		$provide.value("Browser", browserStub);
-		$provide.value("EventCaller", eventCallerStub);
+		$provide.value("EventsCaller", eventsCallerStub);
 
 	}));
 
@@ -3305,13 +3305,13 @@ describe("event fetcher specs : ", function () {
 
 	}))
 
-	it('will pass latitude and longitude to caller', inject(function (EventFetcher,EventCaller) {
+	it('will pass latitude and longitude to caller', inject(function (EventFetcher,EventsCaller) {
 
-		spyOn(EventCaller,'getEvents');
+		spyOn(EventsCaller,'getEvents');
 
 		EventFetcher.fetch();
 
-		expect(EventCaller.getEvents).toHaveBeenCalledWith(jasmine.any(Function),"51.22222","51.11111");
+		expect(EventsCaller.getEvents).toHaveBeenCalledWith(jasmine.any(Function),"51.22222","51.11111");
 
 	}))
 

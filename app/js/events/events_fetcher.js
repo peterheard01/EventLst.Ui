@@ -1,12 +1,12 @@
 angular.module('app.services')
-	.service('EventFetcher', function (LocationDetailsModel, Browser, EventCaller, EventsModel, EventsViewModel) {
+	.service('EventFetcher', function (LocationDetailsModel, Browser, EventsCaller, EventsModel, EventsViewModel) {
 
 		function _fetch() {
 
 			LocationDetailsModel.lon = Browser.longitude;
 			LocationDetailsModel.lat = Browser.latitude;
 
-			EventCaller.getEvents(_fetchSuccess, LocationDetailsModel.lon, LocationDetailsModel.lat);
+			EventsCaller.getEvents(_fetchSuccess, LocationDetailsModel.lon, LocationDetailsModel.lat);
 		}
 
 		function _fetchSuccess(cleanDto){

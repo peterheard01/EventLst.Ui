@@ -3,17 +3,7 @@ angular.module('app.directives').directive('geoLocationDirective', function() {
 		restrict: 'AE',
 		replace: true,
 		template: '<div></div>',
-		//compile: function(elem, attrs) {
-		//
-		//	console.log('compiling');
-		//
-		//	return function(scope, elem, attrs){
-		//
-		//		console.log('linking');
-		//	};
-		//
-		//},
-		controller: function($scope, EventFetcher) {
+		controller: function($scope, Browser, EventFetcher) {
 
 			navigator.geolocation.getCurrentPosition(showPosition);
 
@@ -22,13 +12,11 @@ angular.module('app.directives').directive('geoLocationDirective', function() {
 				Browser.longitude = position.coords.longitude;
 				Browser.latitude = position.coords.latitude;
 
-				console.log(position.coords.latitude);
-				console.log(position.coords.longitude);
+				//console.log(position.coords.latitude);
+				//console.log(position.coords.longitude);
 
 				EventFetcher.fetch();
 
-				//x.innerHTML = "Latitude: " + position.coords.latitude +
-				//"<br>Longitude: " + position.coords.longitude;
 			}
 
 		}

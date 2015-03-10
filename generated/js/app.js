@@ -69049,17 +69049,7 @@ angular.module('app.directives').directive('geoLocationDirective', function() {
 		restrict: 'AE',
 		replace: true,
 		template: '<div></div>',
-		//compile: function(elem, attrs) {
-		//
-		//	console.log('compiling');
-		//
-		//	return function(scope, elem, attrs){
-		//
-		//		console.log('linking');
-		//	};
-		//
-		//},
-		controller: function($scope, EventFetcher) {
+		controller: function($scope, Browser, EventFetcher) {
 
 			navigator.geolocation.getCurrentPosition(showPosition);
 
@@ -69068,18 +69058,66 @@ angular.module('app.directives').directive('geoLocationDirective', function() {
 				Browser.longitude = position.coords.longitude;
 				Browser.latitude = position.coords.latitude;
 
-				console.log(position.coords.latitude);
-				console.log(position.coords.longitude);
+				//console.log(position.coords.latitude);
+				//console.log(position.coords.longitude);
 
 				EventFetcher.fetch();
 
-				//x.innerHTML = "Latitude: " + position.coords.latitude +
-				//"<br>Longitude: " + position.coords.longitude;
 			}
 
 		}
 	};
 });
+
+angular.module('app.services')
+	.service('ResourceCleaner', function () {
+
+		function _clean(angularResource){
+
+			var dataAsString = angular.toJson(angularResource);
+			var cleanedResponseObject = angular.fromJson(dataAsString);
+			return cleanedResponseObject;
+		}
+
+		return {
+			clean : _clean
+		};
+
+	});
+
+angular.module('app.services')
+	.service('EventsCaller',
+	function ($resource, ResourceCleaner) {
+
+		var eventsCallerResource = $resource("http://eventlst-1.apphb.com/api/events?lon=:longitude&lat=:latitude",
+		{},
+		{
+			getEvents: {
+				url: '',
+				method: 'GET',
+				params: {
+					longitude: 'longitude',
+					latitude : 'latitude'
+				},
+				isArray: true
+			}
+
+		});
+
+		function _getEvents(success, longitude, latitude) {
+
+			eventsCallerResource.getEvents({longitude : longitude, latitude:latitude}).$promise.then(function(response){
+				success(ResourceCleaner.clean(response));
+			});
+
+		}
+
+		return {
+			getEvents: _getEvents
+		};
+
+	});
+
 
 angular.module('app.controllers').controller('EventsController',
     function($scope, EventsViewModel) {
@@ -69091,14 +69129,14 @@ angular.module('app.controllers').controller('EventsController',
     });
 
 angular.module('app.services')
-	.service('EventFetcher', function (LocationDetailsModel, Browser, EventCaller, EventsModel, EventsViewModel) {
+	.service('EventFetcher', function (LocationDetailsModel, Browser, EventsCaller, EventsModel, EventsViewModel) {
 
 		function _fetch() {
 
 			LocationDetailsModel.lon = Browser.longitude;
 			LocationDetailsModel.lat = Browser.latitude;
 
-			EventCaller.getEvents(_fetchSuccess, LocationDetailsModel.lon, LocationDetailsModel.lat);
+			EventsCaller.getEvents(_fetchSuccess, LocationDetailsModel.lon, LocationDetailsModel.lat);
 		}
 
 		function _fetchSuccess(cleanDto){
