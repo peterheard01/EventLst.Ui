@@ -3256,6 +3256,12 @@ describe("event fetcher specs : ", function () {
 			getUserLongitude: function () {
 				return "51.11111";
 			}
+		};
+
+		eventCallerStub = {
+			getEvents : function(success, lon, lat){
+				success();
+			}
 		}
 
 		$provide.value("Browser", browserStub);
@@ -3272,8 +3278,17 @@ describe("event fetcher specs : ", function () {
 
 	}))
 
-	//will load latitude and longitude from the browser
-	//will pass latitude and longitude to caller
+	it('will pass latitude and longitude to caller', inject(function (EventFetcher,EventCaller) {
+
+		spyOn(EventCaller,'getEvents')
+
+		EventFetcher.fetch();
+
+		expect(EventCaller.getEvents).toHaveBeenCalledWith(jasmine.any(Function),"51.22222","51.11111");
+
+	}))
+
+	//
 	//will load returned data into a model
 	//will check the data is mapped
 	//will check the date is then mapped to a viewmodel
