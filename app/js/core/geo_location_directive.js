@@ -12,9 +12,6 @@ angular.module('app.directives').directive('geoLocationDirective', function() {
 				Browser.longitude = position.coords.longitude;
 				Browser.latitude = position.coords.latitude;
 
-				//console.log(position.coords.latitude);
-				//console.log(position.coords.longitude);
-
 				EventFetcher.fetch();
 
 			}

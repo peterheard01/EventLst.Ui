@@ -69058,9 +69058,6 @@ angular.module('app.directives').directive('geoLocationDirective', function() {
 				Browser.longitude = position.coords.longitude;
 				Browser.latitude = position.coords.latitude;
 
-				//console.log(position.coords.latitude);
-				//console.log(position.coords.longitude);
-
 				EventFetcher.fetch();
 
 			}
@@ -69223,6 +69220,10 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "<div ng-controller=\"EventsController\">\n" +
     "\n" +
     "    <p id=\"demo\"></p>\n" +
+    "\n" +
+    "    <div ng-repeat=\"event in vm.localEvents\">\n" +
+    "        {{event.Name}}\n" +
+    "    </div>\n" +
     "\n" +
     "    <geo-location-directive></geo-location-directive>\n" +
     "\n" +

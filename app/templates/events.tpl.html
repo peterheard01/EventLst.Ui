@@ -2,6 +2,10 @@
 
     <p id="demo"></p>
 
+    <div ng-repeat="event in vm.localEvents">
+        {{event.Name}}
+    </div>
+
     <geo-location-directive></geo-location-directive>
 
 </div>
