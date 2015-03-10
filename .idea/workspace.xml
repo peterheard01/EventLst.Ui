@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed1158a3-8966-46ef-b470-734bb6b41d60" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/js/app.js.map" afterPath="$PROJECT_DIR$/generated/js/app.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/js/app.js" afterPath="$PROJECT_DIR$/generated/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/events.tpl.html" afterPath="$PROJECT_DIR$/app/templates/events.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/events/events_fetcher.js" afterPath="$PROJECT_DIR$/app/js/events/events_fetcher.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/events_specs.js" afterPath="$PROJECT_DIR$/spec/events_specs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/js/spec.js.map" afterPath="$PROJECT_DIR$/generated/js/spec.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/js/spec.js" afterPath="$PROJECT_DIR$/generated/js/spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/angular/template-cache.js" afterPath="$PROJECT_DIR$/generated/angular/template-cache.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="EventLst.Ui.iws" />
@@ -34,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="events.tpl.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="events.tpl.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/events.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37037036" vertical-offset="0" max-vertical-offset="405">
+            <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="405">
               <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
               <folding />
             </state>
@@ -54,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="events_fetcher.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="events_fetcher.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/events/events_fetcher.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="720">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6293706" vertical-offset="135" max-vertical-offset="720">
+              <caret line="27" column="104" selection-start-line="27" selection-start-column="104" selection-end-line="27" selection-end-column="104" />
               <folding />
             </state>
           </provider>
@@ -109,9 +101,9 @@
         <option value="$PROJECT_DIR$/app/js/core/resource_cleaner.js" />
         <option value="$PROJECT_DIR$/app/js/events/events_caller.js" />
         <option value="$PROJECT_DIR$/app/js/core/geo_location_directive.js" />
-        <option value="$PROJECT_DIR$/app/js/events/events_fetcher.js" />
         <option value="$PROJECT_DIR$/spec/events_specs.js" />
         <option value="$PROJECT_DIR$/app/templates/events.tpl.html" />
+        <option value="$PROJECT_DIR$/app/js/events/events_fetcher.js" />
       </list>
     </option>
   </component>
@@ -127,8 +119,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="106" />
-    <option name="y" value="127" />
+    <option name="x" value="142" />
+    <option name="y" value="36" />
     <option name="width" value="1296" />
     <option name="height" value="768" />
   </component>
@@ -327,7 +319,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="106" y="127" width="1296" height="768" extended-state="0" />
+    <frame x="142" y="36" width="1296" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -562,14 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/events/events_fetcher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="720">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/events_specs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1290">
@@ -580,8 +564,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/events.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37037036" vertical-offset="0" max-vertical-offset="405">
+        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="405">
           <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/events/events_fetcher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6293706" vertical-offset="135" max-vertical-offset="720">
+          <caret line="27" column="104" selection-start-line="27" selection-start-column="104" selection-end-line="27" selection-end-column="104" />
           <folding />
         </state>
       </provider>

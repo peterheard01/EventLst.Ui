@@ -25,7 +25,7 @@ angular.module('app.services')
 
 				var viewModelItem = {};
 				viewModelItem.Name = dtoItem.Name;
-				viewModelItem.DateAndTime = moment(dtoItem.DateAndTime).format("dddd, MMMM Do YYYY, h:mm:ss a");;
+				viewModelItem.DateAndTime = moment(dtoItem.DateAndTime).format("dddd, MMMM Do YYYY, h:mm:ss a");
 				viewModelItem.City = dtoItem.City;
 				viewModelItem.HtmlDescription = dtoItem.HtmlDescription;
 
