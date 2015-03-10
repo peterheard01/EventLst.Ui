@@ -3,7 +3,8 @@ describe("event fetcher specs : ", function () {
 	beforeEach(module('app'));
 	beforeEach(module('app.services'));
 
-	var browserStub;
+	var browserStub, eventCallerStub;
+
 
 	beforeEach(module(function ($provide) {
 
@@ -17,15 +18,16 @@ describe("event fetcher specs : ", function () {
 		}
 
 		$provide.value("Browser", browserStub);
+		$provide.value("EventCaller", eventCallerStub);
 
 	}));
 
-	it('event fetcher will load latitude and longitude from environment', inject(function (EventFetcher) {
+	it('event fetcher will load latitude and longitude from environment', inject(function (EventFetcher,LocationDetailsModel) {
 
-		//EventFetcher.fetch();
+		EventFetcher.fetch();
 
-		//expect(LocationDetailsModel.lat).toBe("51.22222");
-		//expect(LocationDetailsModel.lon).toBe("51.11111");
+		expect(LocationDetailsModel.lon).toBe("51.22222");
+		expect(LocationDetailsModel.lat).toBe("51.11111");
 
 	}))
 

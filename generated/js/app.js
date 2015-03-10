@@ -59274,12 +59274,19 @@ angular.module('app.services')
 	});
 
 angular.module('app.services')
-	.service('EventFetcher', function (LocationDetailsModel, Browser) {
+	.service('EventFetcher', function (LocationDetailsModel, Browser, EventCaller) {
 
 		function _fetch() {
-			LocationDetailsModel.lat = Browser.getUserLatitude();
+			LocationDetailsModel.lon = Browser.getUserLatitude();
 			LocationDetailsModel.lat = Browser.getUserLongitude();
+
+			//EventCaller.getEvents(_fetchSuccess, )
+
 		}
+
+		//function _fetchSuccess(cleanDto){
+		//
+		//}
 
 		return {
 			fetch: _fetch
@@ -59290,12 +59297,9 @@ angular.module('app.services')
 angular.module('app.services')
 	.service('LocationDetailsModel', function () {
 
-		function _fetch() {
-
-		}
-
 		return {
-			fetch: _fetch
+			lon : null,
+			lat : null
 		};
 
 	});
