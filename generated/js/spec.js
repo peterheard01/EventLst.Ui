@@ -3239,6 +3239,38 @@ site: https://github.com/searls/jasmine-fixture
 
 }).call(this);
 
+var eventsStub = (function(){
+
+	return [
+
+			{
+				Name: "Event 1",
+				DateAndTime: "2015-03-10T18:00:00Z",
+				City: "RG2 7AU",
+				HtmlDescription: "<p>I am event 1</p>"
+			},
+			{
+				Name: "Event 2",
+				DateAndTime: "2015-03-10T18:00:00Z",
+				City: "GL1 4TL",
+				HtmlDescription: "<p>I am event 2</p>"
+			},
+			{
+				Name: "Event 3",
+				DateAndTime: "2015-03-10T18:00:00Z",
+				City: "Reading",
+				HtmlDescription: "<p>I am event 3</p>"
+			},
+			{
+				Name: "Event 4",
+				DateAndTime: "2015-03-10T18:00:00Z",
+				City: "Reading, RG2 7AU",
+				HtmlDescription: "<p>I am event 4</p>"
+			}
+	]
+
+}())
+
 describe("event fetcher specs : ", function () {
 
 	beforeEach(module('app'));
@@ -3260,7 +3292,7 @@ describe("event fetcher specs : ", function () {
 
 		eventCallerStub = {
 			getEvents : function(success, lon, lat){
-				success();
+				success(eventsStub);
 			}
 		}
 
@@ -3280,7 +3312,7 @@ describe("event fetcher specs : ", function () {
 
 	it('will pass latitude and longitude to caller', inject(function (EventFetcher,EventCaller) {
 
-		spyOn(EventCaller,'getEvents')
+		spyOn(EventCaller,'getEvents');
 
 		EventFetcher.fetch();
 
@@ -3288,8 +3320,27 @@ describe("event fetcher specs : ", function () {
 
 	}))
 
-	//
-	//will load returned data into a model
+	it('4 items returned then 4 items loaded into model', inject(function (EventFetcher,EventsModel) {
+
+		EventFetcher.fetch();
+
+		expect(EventsModel.events).not.toBeNull();
+		expect(EventsModel.events.length).toBe(4);
+
+	}))
+
+	it('items are mapped', inject(function (EventFetcher,EventsModel) {
+
+		EventFetcher.fetch();
+
+
+		expect(EventsModel.events[3].Name).toBe('Event 4');
+		expect(EventsModel.events[3].DateAndTime).toBe('2015-03-10T18:00:00Z');
+		expect(EventsModel.events[3].City).toBe('Reading, RG2 7AU');
+		expect(EventsModel.events[3].HtmlDescription).toBe("<p>I am event 4</p>");
+
+	}))
+
 	//will check the data is mapped
 	//will check the date is then mapped to a viewmodel
 

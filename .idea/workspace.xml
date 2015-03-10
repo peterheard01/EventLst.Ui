@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed1158a3-8966-46ef-b470-734bb6b41d60" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/events/events_model.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/helpers/stubs/events_stub.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/js/events/event_fetcher.js" afterPath="$PROJECT_DIR$/app/js/events/events_fetcher.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/js/app.js.map" afterPath="$PROJECT_DIR$/generated/js/app.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/js/app.js" afterPath="$PROJECT_DIR$/generated/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/events/event_fetcher.js" afterPath="$PROJECT_DIR$/app/js/events/event_fetcher.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/events_specs.js" afterPath="$PROJECT_DIR$/spec/events_specs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/js/spec.js.map" afterPath="$PROJECT_DIR$/generated/js/spec.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/js/spec.js" afterPath="$PROJECT_DIR$/generated/js/spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="EventLst.Ui.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,36 +37,29 @@
       <file leaf-file-name="events_specs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/events_specs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="930">
-              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="744" max-vertical-offset="1215">
+              <caret line="65" column="64" selection-start-line="65" selection-start-column="64" selection-end-line="65" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event_fetcher.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/js/events/event_fetcher.js">
+      <file leaf-file-name="events_fetcher.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/js/events/events_fetcher.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18248175" vertical-offset="0" max-vertical-offset="411">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.5839416" vertical-offset="90" max-vertical-offset="585">
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spec.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generated/js/spec.js">
+      <file leaf-file-name="events_stub.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/helpers/stubs/events_stub.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.111111" vertical-offset="49125" max-vertical-offset="49560">
-              <caret line="3286" column="0" selection-start-line="3286" selection-start-column="0" selection-end-line="3286" selection-end-column="0" />
-              <folding>
-                <marker date="1425999328000" expanded="true" signature="103534:104573" placeholder="{...}" />
-                <marker date="1425999328000" expanded="true" signature="103364:103685" placeholder="{...}" />
-                <marker date="1425999328000" expanded="true" signature="103371:103490" placeholder="{...}" />
-                <marker date="1425999328000" expanded="true" signature="103543:103570" placeholder="{...}" />
-                <marker date="1425999328000" expanded="true" signature="103556:103570" placeholder="{...}" />
-                <marker date="1425999328000" expanded="true" signature="104383:104437" placeholder="{...}" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="555">
+              <caret line="26" column="45" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,9 +76,12 @@
         <option value="$PROJECT_DIR$/config/files.js" />
         <option value="$PROJECT_DIR$/app/js/core/browser.js" />
         <option value="$PROJECT_DIR$/app/js/events/location_details_model.js" />
-        <option value="$PROJECT_DIR$/generated/js/spec.js" />
-        <option value="$PROJECT_DIR$/spec/events_specs.js" />
         <option value="$PROJECT_DIR$/app/js/events/event_fetcher.js" />
+        <option value="$PROJECT_DIR$/spec/helpers/stubs/events_stub.js" />
+        <option value="$PROJECT_DIR$/generated/js/spec.js" />
+        <option value="$PROJECT_DIR$/app/js/events/events_model.js" />
+        <option value="$PROJECT_DIR$/spec/events_specs.js" />
+        <option value="$PROJECT_DIR$/app/js/events/events_fetcher.js" />
       </list>
     </option>
   </component>
@@ -154,6 +153,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EventLst.Ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EventLst.Ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EventLst.Ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EventLst.Ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stubs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EventLst.Ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EventLst.Ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -195,28 +248,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EventLst.Ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EventLst.Ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -392,14 +423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/events/location_details_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19582245" vertical-offset="0" max-vertical-offset="383">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/core/browser.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.62663186" vertical-offset="0" max-vertical-offset="383">
@@ -408,33 +431,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/events/location_details_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/events/events_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03649635" vertical-offset="0" max-vertical-offset="411">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/generated/js/spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.111111" vertical-offset="49125" max-vertical-offset="49560">
-          <caret line="3286" column="0" selection-start-line="3286" selection-start-column="0" selection-end-line="3286" selection-end-column="0" />
-          <folding>
-            <marker date="1425999328000" expanded="true" signature="103534:104573" placeholder="{...}" />
-            <marker date="1425999328000" expanded="true" signature="103364:103685" placeholder="{...}" />
-            <marker date="1425999328000" expanded="true" signature="103371:103490" placeholder="{...}" />
-            <marker date="1425999328000" expanded="true" signature="103543:103570" placeholder="{...}" />
-            <marker date="1425999328000" expanded="true" signature="103556:103570" placeholder="{...}" />
-            <marker date="1425999328000" expanded="true" signature="104383:104437" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="-0.4851752" vertical-offset="49590" max-vertical-offset="50145">
+          <caret line="3294" column="28" selection-start-line="3294" selection-start-column="28" selection-end-line="3294" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/helpers/stubs/events_stub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="555">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/events_specs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="930">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="744" max-vertical-offset="1215">
+          <caret line="65" column="64" selection-start-line="65" selection-start-column="64" selection-end-line="65" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/events/event_fetcher.js">
+    <entry file="file://$PROJECT_DIR$/app/js/events/events_fetcher.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18248175" vertical-offset="0" max-vertical-offset="411">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.5839416" vertical-offset="90" max-vertical-offset="585">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding />
         </state>
       </provider>

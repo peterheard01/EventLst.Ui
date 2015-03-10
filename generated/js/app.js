@@ -59274,7 +59274,7 @@ angular.module('app.services')
 	});
 
 angular.module('app.services')
-	.service('EventFetcher', function (LocationDetailsModel, Browser, EventCaller) {
+	.service('EventFetcher', function (LocationDetailsModel, Browser, EventCaller, EventsModel) {
 
 		function _fetch() {
 
@@ -59286,10 +59286,32 @@ angular.module('app.services')
 
 		function _fetchSuccess(cleanDto){
 
+
+			angular.forEach(cleanDto,function(dtoItem){
+
+				var modelItem = {}
+				modelItem.Name = dtoItem.Name;
+				modelItem.DateAndTime = dtoItem.DateAndTime;
+				modelItem.City = dtoItem.City;
+				modelItem.HtmlDescription = dtoItem.HtmlDescription;
+
+				EventsModel.events.push(modelItem);
+
+			})
+
 		}
 
 		return {
 			fetch: _fetch
+		};
+
+	});
+
+angular.module('app.services')
+	.service('EventsModel', function () {
+
+		return {
+			events : []
 		};
 
 	});
