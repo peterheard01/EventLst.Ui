@@ -1,3 +1,5 @@
 The user interface section of EventLst this is still a work in progress the code is not clean but it is returning meetup events in your local area...
 
-http://eventlst-1.apphb.com/api/events?lon=-1.0073433&lat=51.4552534
+Please wait for a minute for the site to wake up....
+
+http://eventlstui.herokuapp.com/
