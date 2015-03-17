@@ -69637,7 +69637,7 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "<div class=\"row\">\n" +
     "    <div class=\"col-md-4\">\n" +
     "        <h2>UI code</h2>\n" +
-    "        <p>Pure javascript in the middle with AngularJS at the edges. Check out the code...</p>\n" +
+    "        <p>Pure javascript in the middle with AngularJS at the edges hosted on Heroku. Check out the code...</p>\n" +
     "        <p><a class=\"btn btn-default\" href=\"https://github.com/peterheard01/EventLst.Ui\">Go »</a></p>\n" +
     "    </div>\n" +
     "    <div class=\"col-md-4\">\n" +
