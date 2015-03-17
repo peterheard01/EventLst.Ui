@@ -1,7 +1,7 @@
 angular.module('app.services')
 	.service('EventsViewModelBuilder', function (EventsViewModel, EventViewModel, AbstractBuilder) {
 
-		AbstractBuilder(this);
+		new AbstractBuilder(this);
 
 		this.model = EventsViewModel;
 		this.model.items = EventsViewModel.localEvents;

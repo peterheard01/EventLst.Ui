@@ -1,7 +1,7 @@
 angular.module('app.services')
 	.service('EventsModelBuilder', function (EventsModel,EventModel, AbstractBuilder) {
 
-		AbstractBuilder(this);
+		new AbstractBuilder(this);
 
 		this.model = EventsModel;
 		this.model.items = EventsModel.events;

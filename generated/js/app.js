@@ -69410,7 +69410,7 @@ angular.module('app.services')
 
 			});
 
-		};
+		}
 
 		function setStatus(childArg){
 			if(childArg.model.items.length > 0) {
@@ -69560,7 +69560,7 @@ angular.module('app.services')
 angular.module('app.services')
 	.service('EventsModelBuilder', function (EventsModel,EventModel, AbstractBuilder) {
 
-		AbstractBuilder(this);
+		new AbstractBuilder(this);
 
 		this.model = EventsModel;
 		this.model.items = EventsModel.events;
@@ -69599,7 +69599,7 @@ angular.module('app.services')
 angular.module('app.services')
 	.service('EventsViewModelBuilder', function (EventsViewModel, EventViewModel, AbstractBuilder) {
 
-		AbstractBuilder(this);
+		new AbstractBuilder(this);
 
 		this.model = EventsViewModel;
 		this.model.items = EventsViewModel.localEvents;

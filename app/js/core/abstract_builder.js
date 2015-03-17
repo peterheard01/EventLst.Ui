@@ -20,7 +20,7 @@ angular.module('app.services')
 
 			});
 
-		};
+		}
 
 		function setStatus(childArg){
 			if(childArg.model.items.length > 0) {
