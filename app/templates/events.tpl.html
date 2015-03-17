@@ -1,22 +1,33 @@
-<div ng-controller="EventsController">
+<div ng-controller="EventsController" class="jumbotron">
 
-    <p id="demo"></p>
+    <div ng-show="vm.localEvents.length == 0" class="spinner">
 
-    <table>
-
-
-
-            <tr  ng-repeat="event in vm.localEvents">
-                <td>{{event.Name}}</td>
-                <td>{{event.City}}</td>
-                <td>{{event.DateAndTime}}</td>
-            </tr>
+        Fetching data...
+        <span  us-spinner></span>
 
 
+    </div>
 
 
-    </table>
+    <div ng-show="vm.localEvents.length > 0">
 
-    <geo-location-directive></geo-location-directive>
+        <div class="row" ng-repeat="event in vm.localEvents">
+            <div class="col-md-4">
+                {{event.Name}}
+            </div>
+            <div class="col-md-4">
+                {{event.City}}
+            </div>
+            <div class="col-md-4">
+                {{event.DateAndTime}}
+            </div>
+        </div>
+
+    </div>
 
 </div>
+
+
+
+
+<geo-location-directive></geo-location-directive>
