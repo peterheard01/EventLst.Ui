@@ -1,9 +1,9 @@
-angular.module('app.directives').directive('geoLocationDirective', function() {
+angular.module('app.directives').directive('geoLocationDirective', function(EventFetcher) {
 	return {
 		restrict: 'AE',
 		replace: true,
 		template: '<div></div>',
-		controller: function($scope, Browser, EventFetcher) {
+		controller: function($scope, Browser) {
 
 			navigator.geolocation.getCurrentPosition(showPosition);
 

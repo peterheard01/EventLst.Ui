@@ -3,6 +3,4 @@ angular.module('app.controllers').controller('EventsController',
 
 			$scope.vm = EventsViewModel;
 
-
-
     });
