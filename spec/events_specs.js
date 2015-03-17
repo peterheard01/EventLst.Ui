@@ -73,4 +73,35 @@ describe("event fetcher specs : ", function () {
 
 	}))
 
+	it('view status is set to ready', inject(function (EventFetcher,EventsViewModel) {
+
+		EventFetcher.fetch();
+
+		expect(EventsViewModel.status).toBe('hasdata');
+
+	}))
+
+	it('when no results then status set to empty',function(){
+
+		module(function($provide) {
+
+			eventsCallerStub = {
+				getEvents : function(success, lon, lat){
+					success([]);
+				}
+			}
+
+			$provide.value("EventsCaller", eventsCallerStub);
+
+		});
+
+		inject(function(EventFetcher, EventsViewModel) {
+
+			EventFetcher.fetch();
+
+			expect(EventsViewModel.status).toBe('nodata');
+
+		});
+	})
+
 })

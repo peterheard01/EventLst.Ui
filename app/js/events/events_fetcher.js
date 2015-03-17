@@ -11,13 +11,8 @@ angular.module('app.services')
 
 		function _fetchSuccess(cleanDto){
 
-			angular.forEach(cleanDto,function(dtoItem){
-
-				EventsModelBuilder.build(dtoItem);
-				EventsViewModelBuilder.build(dtoItem);
-
-			});
-
+				EventsModelBuilder.build(cleanDto);
+				EventsViewModelBuilder.build(cleanDto);
 		}
 
 		return {

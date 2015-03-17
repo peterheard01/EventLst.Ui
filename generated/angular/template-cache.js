@@ -28,16 +28,50 @@ angular.module("app").run(["$templateCache", function($templateCache) {
   $templateCache.put("events.tpl.html",
     "<div ng-controller=\"EventsController\" class=\"jumbotron\">\n" +
     "\n" +
-    "    <div ng-show=\"vm.localEvents.length == 0\" class=\"spinner\">\n" +
     "\n" +
-    "        Fetching data...\n" +
-    "        <span  us-spinner></span>\n" +
+    "\n" +
+    "    <div ng-show=\"vm.status == null\" class=\"spinner-container\">\n" +
+    "\n" +
+    "        <div class=\"text-center\">\n" +
+    "            Fetching data...\n" +
+    "            <br/>\n" +
+    "            <br/>\n" +
+    "            <br/>\n" +
+    "            <br/>\n" +
+    "        </div>\n" +
+    "        <div class=\"text-center\" us-spinner=\"{radius:15, width:4, length: 8}\">\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <div ng-show=\"vm.status == 'nodata'\" class=\"spinner-container\">\n" +
+    "\n" +
+    "        <div class=\"text-center\">\n" +
+    "            No data available\n" +
+    "            <br/>\n" +
+    "            <br/>\n" +
+    "            <br/>\n" +
+    "            <br/>\n" +
+    "        </div>\n" +
     "\n" +
     "\n" +
     "    </div>\n" +
     "\n" +
     "\n" +
-    "    <div ng-show=\"vm.localEvents.length > 0\">\n" +
+    "    <div ng-show=\"vm.status == 'hasdata'\">\n" +
+    "\n" +
+    "        <div class=\"row\">\n" +
+    "            <div class=\"col-md-4\">\n" +
+    "                <h2>Name</h2>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-md-4\">\n" +
+    "                <h2>City</h2>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-md-4\">\n" +
+    "                <h2>Date</h2>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
     "\n" +
     "        <div class=\"row\" ng-repeat=\"event in vm.localEvents\">\n" +
     "            <div class=\"col-md-4\">\n" +

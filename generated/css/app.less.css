@@ -7840,6 +7840,10 @@ button.close {
 body {
   padding-top: 50px;
 }
-.spinner {
+#eventlst .spinner-container {
   height: 200px;
+}
+#eventlst .spinner-container .spinner {
+  position: relative !important;
+  display: block;
 }

@@ -1,15 +1,49 @@
 <div ng-controller="EventsController" class="jumbotron">
 
-    <div ng-show="vm.localEvents.length == 0" class="spinner">
 
-        Fetching data...
-        <span  us-spinner></span>
+
+    <div ng-show="vm.status == null" class="spinner-container">
+
+        <div class="text-center">
+            Fetching data...
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+        <div class="text-center" us-spinner="{radius:15, width:4, length: 8}">
+
+        </div>
+
+    </div>
+
+    <div ng-show="vm.status == 'nodata'" class="spinner-container">
+
+        <div class="text-center">
+            No data available
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
 
 
     </div>
 
 
-    <div ng-show="vm.localEvents.length > 0">
+    <div ng-show="vm.status == 'hasdata'">
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Name</h2>
+            </div>
+            <div class="col-md-4">
+                <h2>City</h2>
+            </div>
+            <div class="col-md-4">
+                <h2>Date</h2>
+            </div>
+        </div>
 
         <div class="row" ng-repeat="event in vm.localEvents">
             <div class="col-md-4">

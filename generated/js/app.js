@@ -69490,13 +69490,8 @@ angular.module('app.services')
 
 		function _fetchSuccess(cleanDto){
 
-			angular.forEach(cleanDto,function(dtoItem){
-
-				EventsModelBuilder.build(dtoItem);
-				EventsViewModelBuilder.build(dtoItem);
-
-			});
-
+				EventsModelBuilder.build(cleanDto);
+				EventsViewModelBuilder.build(cleanDto);
 		}
 
 		return {
@@ -69529,16 +69524,19 @@ angular.module('app.services')
 angular.module('app.services')
 	.service('EventsModelBuilder', function (EventsModel,EventModel) {
 
-		this.build = function(dtoItem){
+		this.build = function(cleanDto){
 
-			var eventModel = new EventModel();
+			angular.forEach(cleanDto,function(dtoItem) {
+				var eventModel = new EventModel();
 
-			eventModel.Name = dtoItem.Name;
-			eventModel.DateAndTime = moment(dtoItem.DateAndTime);
-			eventModel.City = dtoItem.City;
-			eventModel.HtmlDescription = dtoItem.HtmlDescription;
+				eventModel.Name = dtoItem.Name;
+				eventModel.DateAndTime = moment(dtoItem.DateAndTime);
+				eventModel.City = dtoItem.City;
+				eventModel.HtmlDescription = dtoItem.HtmlDescription;
 
-			EventsModel.events.push(eventModel);
+				EventsModel.events.push(eventModel);
+
+			});
 
 		};
 
@@ -69560,6 +69558,7 @@ angular.module('app.services')
 	.service('EventsViewModel', function () {
 
 		return {
+			status:null,
 			localEvents : []
 		};
 
@@ -69568,16 +69567,30 @@ angular.module('app.services')
 angular.module('app.services')
 	.service('EventsViewModelBuilder', function (EventsViewModel,EventViewModel) {
 
-		this.build = function(dtoItem){
+		this.build = function(cleanDto){
 
-			var eventViewModel = new EventViewModel();
+			angular.forEach(cleanDto,function(dtoItem) {
 
-			eventViewModel.Name = dtoItem.Name;
-			eventViewModel.DateAndTime = moment(dtoItem.DateAndTime).format("dddd, MMMM Do YYYY, h:mm:ss a");
-			eventViewModel.City = dtoItem.City;
-			eventViewModel.HtmlDescription = dtoItem.HtmlDescription;
+				var eventViewModel = new EventViewModel();
 
-			EventsViewModel.localEvents.push(eventViewModel);
+				eventViewModel.Name = dtoItem.Name;
+				eventViewModel.DateAndTime = moment(dtoItem.DateAndTime).format("dddd, MMMM Do YYYY, h:mm:ss a");
+				eventViewModel.City = dtoItem.City;
+				eventViewModel.HtmlDescription = dtoItem.HtmlDescription;
+
+				EventsViewModel.localEvents.push(eventViewModel);
+
+			});
+
+			if(EventsViewModel.localEvents.length > 0) {
+
+				EventsViewModel.status = 'hasdata';
+
+			}else{
+
+				EventsViewModel.status = 'nodata';
+
+			}
 
 		};
 
@@ -69623,16 +69636,50 @@ angular.module("app").run(["$templateCache", function($templateCache) {
   $templateCache.put("events.tpl.html",
     "<div ng-controller=\"EventsController\" class=\"jumbotron\">\n" +
     "\n" +
-    "    <div ng-show=\"vm.localEvents.length == 0\" class=\"spinner\">\n" +
     "\n" +
-    "        Fetching data...\n" +
-    "        <span  us-spinner></span>\n" +
+    "\n" +
+    "    <div ng-show=\"vm.status == null\" class=\"spinner-container\">\n" +
+    "\n" +
+    "        <div class=\"text-center\">\n" +
+    "            Fetching data...\n" +
+    "            <br/>\n" +
+    "            <br/>\n" +
+    "            <br/>\n" +
+    "            <br/>\n" +
+    "        </div>\n" +
+    "        <div class=\"text-center\" us-spinner=\"{radius:15, width:4, length: 8}\">\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <div ng-show=\"vm.status == 'nodata'\" class=\"spinner-container\">\n" +
+    "\n" +
+    "        <div class=\"text-center\">\n" +
+    "            No data available\n" +
+    "            <br/>\n" +
+    "            <br/>\n" +
+    "            <br/>\n" +
+    "            <br/>\n" +
+    "        </div>\n" +
     "\n" +
     "\n" +
     "    </div>\n" +
     "\n" +
     "\n" +
-    "    <div ng-show=\"vm.localEvents.length > 0\">\n" +
+    "    <div ng-show=\"vm.status == 'hasdata'\">\n" +
+    "\n" +
+    "        <div class=\"row\">\n" +
+    "            <div class=\"col-md-4\">\n" +
+    "                <h2>Name</h2>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-md-4\">\n" +
+    "                <h2>City</h2>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-md-4\">\n" +
+    "                <h2>Date</h2>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
     "\n" +
     "        <div class=\"row\" ng-repeat=\"event in vm.localEvents\">\n" +
     "            <div class=\"col-md-4\">\n" +
