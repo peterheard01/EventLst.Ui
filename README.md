@@ -1,6 +1,6 @@
 Eventlst is a distributed, cleanly coded, test driven web application. It comes in two parts :
 
-**Front End : Javascript SPA (AngularJS)**
+**Front End : Javascript SPA (AngularJS) [hosted on Heroku]**
 
 Lineman.js is used as a wrapper around an angularJs appliction.
 To see the live site please go [here][1].
@@ -12,7 +12,7 @@ The source code is here : [https://github.com/peterheard01/EventLst.Ui][2].
   [2]: https://github.com/peterheard01/EventLst.Ui
 
 
-**Back End : C# backend (.net Web-Api)**
+**Back End : C# backend (.net Web-Api) [hosted on Appharbor]**
 
 Asp.net Web-Api has been used to reach into the data providers and get the data. As this application does not host the data itself the api performs security handshakes with the providers such as meetup.com.
 
@@ -31,7 +31,7 @@ Here are the (most important) design considerations:
 
 You can see the deployed application at...
 
-The source code is here : [http://eventlstui.herokuapp.com][2].
+See the live site : [http://eventlstui.herokuapp.com][2].
 
   [2]: http://eventlstui.herokuapp.com
 
