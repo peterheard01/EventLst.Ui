@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed1158a3-8966-46ef-b470-734bb6b41d60" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/css/app.css.map" afterPath="$PROJECT_DIR$/generated/css/app.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/css/app.css" afterPath="$PROJECT_DIR$/generated/css/app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/core/abstract_builder.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/js/app.js.map" afterPath="$PROJECT_DIR$/generated/js/app.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/js/app.js" afterPath="$PROJECT_DIR$/generated/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/css/app.less.css" afterPath="$PROJECT_DIR$/generated/css/app.less.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.less" afterPath="$PROJECT_DIR$/app/css/app.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/events.tpl.html" afterPath="$PROJECT_DIR$/app/templates/events.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/events/events_fetcher.js" afterPath="$PROJECT_DIR$/app/js/events/events_fetcher.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/events/events_model/events_model_builder.js" afterPath="$PROJECT_DIR$/app/js/events/events_model/events_model_builder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/events_specs.js" afterPath="$PROJECT_DIR$/spec/events_specs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/events/events_view_model/events_view_model.js" afterPath="$PROJECT_DIR$/app/js/events/events_view_model/events_view_model.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/events/events_view_model/events_view_model_builder.js" afterPath="$PROJECT_DIR$/app/js/events/events_view_model/events_view_model_builder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/index.html" afterPath="$PROJECT_DIR$/generated/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages/index.us" afterPath="$PROJECT_DIR$/app/pages/index.us" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/js/spec.js.map" afterPath="$PROJECT_DIR$/generated/js/spec.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/js/spec.js" afterPath="$PROJECT_DIR$/generated/js/spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/angular/template-cache.js" afterPath="$PROJECT_DIR$/generated/angular/template-cache.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="EventLst.Ui.iws" />
@@ -43,21 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="events.tpl.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/events.tpl.html">
+      <file leaf-file-name="events_fetcher.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/js/events/events_fetcher.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44594595" vertical-offset="240" max-vertical-offset="1080">
-              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="events_specs.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/events_specs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1076" max-vertical-offset="1695">
-              <caret line="79" column="48" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.5329949" vertical-offset="0" max-vertical-offset="420">
+              <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -66,8 +44,8 @@
       <file leaf-file-name="events_view_model_builder.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/events/events_view_model/events_view_model_builder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="555">
-              <caret line="20" column="41" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -76,8 +54,8 @@
       <file leaf-file-name="events_model_builder.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/events/events_model/events_model_builder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-              <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -127,11 +105,13 @@
         <option value="$PROJECT_DIR$/app/pages/index.us" />
         <option value="$PROJECT_DIR$/app/css/app.less" />
         <option value="$PROJECT_DIR$/app/js/events/events_view_model/events_view_model.js" />
-        <option value="$PROJECT_DIR$/app/js/events/events_model/events_model_builder.js" />
         <option value="$PROJECT_DIR$/app/js/events/events_fetcher.js" />
-        <option value="$PROJECT_DIR$/spec/events_specs.js" />
-        <option value="$PROJECT_DIR$/app/js/events/events_view_model/events_view_model_builder.js" />
         <option value="$PROJECT_DIR$/app/templates/events.tpl.html" />
+        <option value="$PROJECT_DIR$/app/js/core/builder.js" />
+        <option value="$PROJECT_DIR$/app/js/events/events_view_model/events_view_model_builder.js" />
+        <option value="$PROJECT_DIR$/spec/events_specs.js" />
+        <option value="$PROJECT_DIR$/app/js/events/events_model/events_model_builder.js" />
+        <option value="$PROJECT_DIR$/app/js/core/abstract_builder.js" />
       </list>
     </option>
   </component>
@@ -147,8 +127,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="73" />
-    <option name="y" value="65" />
+    <option name="x" value="74" />
+    <option name="y" value="35" />
     <option name="width" value="1220" />
     <option name="height" value="735" />
   </component>
@@ -284,10 +264,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -303,21 +279,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EventLst.Ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EventLst.Ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,6 +300,62 @@
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EventLst.Ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EventLst.Ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events_view_model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EventLst.Ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EventLst.Ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events_model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -345,7 +363,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tristarretailweb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2014/Eca/Landmark.Eca.web" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="options.lastSelected" value="preferences.fileTypes" />
@@ -422,7 +440,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="65" width="1220" height="735" extended-state="0" />
+    <frame x="74" y="35" width="1220" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -436,7 +454,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31943285" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31943285" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -610,14 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/events/events_model/events_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/events/location_details_model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
@@ -626,26 +636,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/events/events_model/event_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27972028" vertical-offset="0" max-vertical-offset="429">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/events/events_caller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06993007" vertical-offset="0" max-vertical-offset="585">
           <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/events/events_view_model/event_view_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27972028" vertical-offset="0" max-vertical-offset="429">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -762,50 +756,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/events/events_view_model/events_view_model.js">
+    <entry file="file://$PROJECT_DIR$/app/templates/events.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14051522" vertical-offset="0" max-vertical-offset="427">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        <state vertical-scroll-proportion="-21.25" vertical-offset="0" max-vertical-offset="1080">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/events/events_fetcher.js">
+    <entry file="file://$PROJECT_DIR$/app/js/core/abstract_builder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4918033" vertical-offset="0" max-vertical-offset="427">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/events/events_model/events_model_builder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/events_specs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1076" max-vertical-offset="1695">
-          <caret line="79" column="48" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="48" />
+        <state vertical-scroll-proportion="2.85533" vertical-offset="0" max-vertical-offset="1695">
+          <caret line="75" column="3" selection-start-line="75" selection-start-column="3" selection-end-line="75" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/events/events_view_model/events_view_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15228426" vertical-offset="0" max-vertical-offset="394">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/events/events_view_model/event_view_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30456853" vertical-offset="0" max-vertical-offset="394">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/events/events_model/event_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/events/events_model/events_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15228426" vertical-offset="0" max-vertical-offset="394">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/events/events_model/events_model_builder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/events/events_view_model/events_view_model_builder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="555">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/events.tpl.html">
+    <entry file="file://$PROJECT_DIR$/app/js/events/events_fetcher.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44594595" vertical-offset="240" max-vertical-offset="1080">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.5329949" vertical-offset="0" max-vertical-offset="420">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
           <folding />
         </state>
       </provider>

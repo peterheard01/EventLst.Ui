@@ -69389,6 +69389,40 @@ angular.module('app.templates', []);
 
 
 angular.module('app.services')
+	.service('AbstractBuilder', function (EventsViewModel,EventViewModel) {
+
+		//var child;
+		var abstractBuilder = function(childArg){
+
+			childArg.build = function(cleanDto){
+
+				//do mapping
+				angular.forEach(cleanDto,function(dtoItem) {
+
+					childArg.model.items.push(childArg.map(dtoItem));
+
+				});
+
+				//do status setting
+				if(childArg.model.items.length > 0) {
+
+					childArg.model.status = 'hasdata';
+
+				}else{
+
+					childArg.model.status = 'nodata';
+
+				}
+
+			};
+
+		}
+
+		return abstractBuilder;
+
+	});
+
+angular.module('app.services')
 	.service('Browser', function () {
 
 		return {
@@ -69522,22 +69556,21 @@ angular.module('app.services')
 	});
 
 angular.module('app.services')
-	.service('EventsModelBuilder', function (EventsModel,EventModel) {
+	.service('EventsModelBuilder', function (EventsModel,EventModel, AbstractBuilder) {
 
-		this.build = function(cleanDto){
+		AbstractBuilder(this);
 
-			angular.forEach(cleanDto,function(dtoItem) {
-				var eventModel = new EventModel();
+		this.model = EventsModel;
+		this.model.items = EventsModel.events;
 
-				eventModel.Name = dtoItem.Name;
-				eventModel.DateAndTime = moment(dtoItem.DateAndTime);
-				eventModel.City = dtoItem.City;
-				eventModel.HtmlDescription = dtoItem.HtmlDescription;
+		this.map = function(dtoItem){
 
-				EventsModel.events.push(eventModel);
-
-			});
-
+			var modelItem = new EventModel();
+			modelItem.Name = dtoItem.Name;
+			modelItem.DateAndTime = moment(dtoItem.DateAndTime);
+			modelItem.City = dtoItem.City;
+			modelItem.HtmlDescription = dtoItem.HtmlDescription;
+			return modelItem;
 		};
 
 	});
@@ -69565,33 +69598,21 @@ angular.module('app.services')
 	});
 
 angular.module('app.services')
-	.service('EventsViewModelBuilder', function (EventsViewModel,EventViewModel) {
+	.service('EventsViewModelBuilder', function (EventsViewModel, EventViewModel, AbstractBuilder) {
 
-		this.build = function(cleanDto){
+		AbstractBuilder(this);
 
-			angular.forEach(cleanDto,function(dtoItem) {
+		this.model = EventsViewModel;
+		this.model.items = EventsViewModel.localEvents;
 
-				var eventViewModel = new EventViewModel();
+		this.map = function(dtoItem){
 
-				eventViewModel.Name = dtoItem.Name;
-				eventViewModel.DateAndTime = moment(dtoItem.DateAndTime).format("dddd, MMMM Do YYYY, h:mm:ss a");
-				eventViewModel.City = dtoItem.City;
-				eventViewModel.HtmlDescription = dtoItem.HtmlDescription;
-
-				EventsViewModel.localEvents.push(eventViewModel);
-
-			});
-
-			if(EventsViewModel.localEvents.length > 0) {
-
-				EventsViewModel.status = 'hasdata';
-
-			}else{
-
-				EventsViewModel.status = 'nodata';
-
-			}
-
+			var modelItem = new EventViewModel();
+			modelItem.Name = dtoItem.Name;
+			modelItem.DateAndTime = moment(dtoItem.DateAndTime).format("dddd, MMMM Do YYYY, h:mm:ss a");
+			modelItem.City = dtoItem.City;
+			modelItem.HtmlDescription = dtoItem.HtmlDescription;
+			return modelItem;
 		};
 
 	});

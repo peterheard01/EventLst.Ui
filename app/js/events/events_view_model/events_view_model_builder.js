@@ -1,31 +1,19 @@
 angular.module('app.services')
-	.service('EventsViewModelBuilder', function (EventsViewModel,EventViewModel) {
+	.service('EventsViewModelBuilder', function (EventsViewModel, EventViewModel, AbstractBuilder) {
 
-		this.build = function(cleanDto){
+		AbstractBuilder(this);
 
-			angular.forEach(cleanDto,function(dtoItem) {
+		this.model = EventsViewModel;
+		this.model.items = EventsViewModel.localEvents;
 
-				var eventViewModel = new EventViewModel();
+		this.map = function(dtoItem){
 
-				eventViewModel.Name = dtoItem.Name;
-				eventViewModel.DateAndTime = moment(dtoItem.DateAndTime).format("dddd, MMMM Do YYYY, h:mm:ss a");
-				eventViewModel.City = dtoItem.City;
-				eventViewModel.HtmlDescription = dtoItem.HtmlDescription;
-
-				EventsViewModel.localEvents.push(eventViewModel);
-
-			});
-
-			if(EventsViewModel.localEvents.length > 0) {
-
-				EventsViewModel.status = 'hasdata';
-
-			}else{
-
-				EventsViewModel.status = 'nodata';
-
-			}
-
+			var modelItem = new EventViewModel();
+			modelItem.Name = dtoItem.Name;
+			modelItem.DateAndTime = moment(dtoItem.DateAndTime).format("dddd, MMMM Do YYYY, h:mm:ss a");
+			modelItem.City = dtoItem.City;
+			modelItem.HtmlDescription = dtoItem.HtmlDescription;
+			return modelItem;
 		};
 
 	});

@@ -1,20 +1,19 @@
 angular.module('app.services')
-	.service('EventsModelBuilder', function (EventsModel,EventModel) {
+	.service('EventsModelBuilder', function (EventsModel,EventModel, AbstractBuilder) {
 
-		this.build = function(cleanDto){
+		AbstractBuilder(this);
 
-			angular.forEach(cleanDto,function(dtoItem) {
-				var eventModel = new EventModel();
+		this.model = EventsModel;
+		this.model.items = EventsModel.events;
 
-				eventModel.Name = dtoItem.Name;
-				eventModel.DateAndTime = moment(dtoItem.DateAndTime);
-				eventModel.City = dtoItem.City;
-				eventModel.HtmlDescription = dtoItem.HtmlDescription;
+		this.map = function(dtoItem){
 
-				EventsModel.events.push(eventModel);
-
-			});
-
+			var modelItem = new EventModel();
+			modelItem.Name = dtoItem.Name;
+			modelItem.DateAndTime = moment(dtoItem.DateAndTime);
+			modelItem.City = dtoItem.City;
+			modelItem.HtmlDescription = dtoItem.HtmlDescription;
+			return modelItem;
 		};
 
 	});
