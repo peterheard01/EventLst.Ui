@@ -3339,10 +3339,6 @@ describe("event fetcher specs : ", function () {
 
 		EventFetcher.fetch();
 
-		//moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
-
-		//console.log(EventsViewModel.localEvents[3].DateAndTime);
-
 		expect(EventsViewModel.localEvents[3].Name).toBe('Event 4');
 		expect(EventsViewModel.localEvents[3].DateAndTime).toEqual("Tuesday, March 10th 2015, 6:00:00 pm");
 		expect(EventsViewModel.localEvents[3].City).toBe('Reading, RG2 7AU');

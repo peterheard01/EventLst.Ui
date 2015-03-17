@@ -69126,7 +69126,7 @@ angular.module('app.controllers').controller('EventsController',
     });
 
 angular.module('app.services')
-	.service('EventFetcher', function (LocationDetailsModel, Browser, EventsCaller, EventsModel, EventsViewModel) {
+	.service('EventFetcher', function (LocationDetailsModel, Browser, EventsCaller, EventsModelBuilder, EventsViewModelBuilder) {
 
 		function _fetch() {
 
@@ -69140,23 +69140,8 @@ angular.module('app.services')
 
 			angular.forEach(cleanDto,function(dtoItem){
 
-				var modelItem = {};
-				modelItem.Name = dtoItem.Name;
-				modelItem.DateAndTime = moment(dtoItem.DateAndTime);
-				modelItem.City = dtoItem.City;
-				modelItem.HtmlDescription = dtoItem.HtmlDescription;
-
-				EventsModel.events.push(modelItem);
-
-				//modelItem.DateAndTime = modelItem.DateAndTime.format("dddd, MMMM Do YYYY, h:mm:ss a");
-
-				var viewModelItem = {};
-				viewModelItem.Name = dtoItem.Name;
-				viewModelItem.DateAndTime = moment(dtoItem.DateAndTime).format("dddd, MMMM Do YYYY, h:mm:ss a");
-				viewModelItem.City = dtoItem.City;
-				viewModelItem.HtmlDescription = dtoItem.HtmlDescription;
-
-				EventsViewModel.localEvents.push(viewModelItem);
+				EventsModelBuilder.build(dtoItem);
+				EventsViewModelBuilder.build(dtoItem);
 
 			});
 
@@ -69164,6 +69149,18 @@ angular.module('app.services')
 
 		return {
 			fetch: _fetch
+		};
+
+	});
+
+angular.module('app.services')
+	.service('EventModel', function () {
+
+		return function(){
+			this.Name = null;
+			this.DateAndTime = null;
+			this.City = null;
+			this.HtmlDescription = null;
 		};
 
 	});
@@ -69178,10 +69175,58 @@ angular.module('app.services')
 	});
 
 angular.module('app.services')
+	.service('EventsModelBuilder', function (EventsModel,EventModel) {
+
+		this.build = function(dtoItem){
+
+			var eventModel = new EventModel();
+
+			eventModel.Name = dtoItem.Name;
+			eventModel.DateAndTime = moment(dtoItem.DateAndTime);
+			eventModel.City = dtoItem.City;
+			eventModel.HtmlDescription = dtoItem.HtmlDescription;
+
+			EventsModel.events.push(eventModel);
+
+		};
+
+	});
+
+angular.module('app.services')
+	.service('EventViewModel', function () {
+
+		return function(){
+			this.Name = null;
+			this.DateAndTime = null;
+			this.City = null;
+			this.HtmlDescription = null;
+		};
+
+	});
+
+angular.module('app.services')
 	.service('EventsViewModel', function () {
 
 		return {
 			localEvents : []
+		};
+
+	});
+
+angular.module('app.services')
+	.service('EventsViewModelBuilder', function (EventsViewModel,EventViewModel) {
+
+		this.build = function(dtoItem){
+
+			var eventViewModel = new EventViewModel();
+
+			eventViewModel.Name = dtoItem.Name;
+			eventViewModel.DateAndTime = moment(dtoItem.DateAndTime).format("dddd, MMMM Do YYYY, h:mm:ss a");
+			eventViewModel.City = dtoItem.City;
+			eventViewModel.HtmlDescription = dtoItem.HtmlDescription;
+
+			EventsViewModel.localEvents.push(eventViewModel);
+
 		};
 
 	});
