@@ -3340,7 +3340,8 @@ describe("event fetcher specs : ", function () {
 		EventFetcher.fetch();
 
 		expect(EventsViewModel.localEvents[3].Name).toBe('Event 4');
-		expect(EventsViewModel.localEvents[3].DateAndTime).toEqual("Tuesday, March 10th 2015, 6:00:00 pm");
+		expect(EventsViewModel.localEvents[3].DateAndTimeString).toEqual("Tuesday, March 10th 2015, 6:00:00 pm");
+		expect(EventsViewModel.localEvents[3].DateAndTime).toEqual(moment('2015-03-10T18:00:00Z'));
 		expect(EventsViewModel.localEvents[3].City).toBe('Reading, RG2 7AU');
 		expect(EventsViewModel.localEvents[3].HtmlDescription).toBe("<p>I am event 4</p>");
 

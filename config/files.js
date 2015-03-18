@@ -9,7 +9,8 @@ module.exports = function(lineman) {
         "vendor/js/jquery-ui.js",
         "vendor/js/lodash.js",
         "vendor/js/bootstrap/tooltip.js",
-        "vendor/js/**/*.js"
+        "vendor/js/**/*.js",
+				"vendor/js/*.js"
       ],
       app: [
         "app/js/app.js",

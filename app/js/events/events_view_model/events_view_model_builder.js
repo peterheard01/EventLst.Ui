@@ -10,7 +10,8 @@ angular.module('app.services')
 
 			var modelItem = new EventViewModel();
 			modelItem.Name = dtoItem.Name;
-			modelItem.DateAndTime = moment(dtoItem.DateAndTime).format("dddd, MMMM Do YYYY, h:mm:ss a");
+			modelItem.DateAndTimeString = moment(dtoItem.DateAndTime).format("dddd, MMMM Do YYYY, h:mm:ss a");
+			modelItem.DateAndTime = moment(dtoItem.DateAndTime);
 			modelItem.City = dtoItem.City;
 			modelItem.HtmlDescription = dtoItem.HtmlDescription;
 			return modelItem;

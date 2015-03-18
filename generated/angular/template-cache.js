@@ -29,7 +29,6 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "<div ng-controller=\"EventsController\" class=\"jumbotron\">\n" +
     "\n" +
     "\n" +
-    "\n" +
     "    <div ng-show=\"vm.status == null\" class=\"spinner-container\">\n" +
     "\n" +
     "        <div class=\"text-center\">\n" +
@@ -58,30 +57,35 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "\n" +
     "    </div>\n" +
     "\n" +
-    "\n" +
     "    <div ng-show=\"vm.status == 'hasdata'\">\n" +
     "\n" +
     "        <div class=\"row\">\n" +
-    "            <div class=\"col-md-4\">\n" +
+    "            <div class=\"col-md-3\">\n" +
     "                <h2>Name</h2>\n" +
     "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
+    "            <div class=\"col-md-3\">\n" +
     "                <h2>City</h2>\n" +
     "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
+    "            <div class=\"col-md-3\">\n" +
     "                <h2>Date</h2>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "                <h2>Timer</h2>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
     "        <div class=\"row\" ng-repeat=\"event in vm.localEvents\">\n" +
-    "            <div class=\"col-md-4\">\n" +
+    "            <div class=\"col-md-3\">\n" +
     "                {{event.Name}}\n" +
     "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
+    "            <div class=\"col-md-3\">\n" +
     "                {{event.City}}\n" +
     "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                {{event.DateAndTime}}\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "                {{event.DateAndTimeString}}\n" +
+    "            </div>\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "                <div ng-model=\"event.DateAndTime\" countdown-timer-directive></div>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "\n" +

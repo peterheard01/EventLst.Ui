@@ -1,7 +1,6 @@
 <div ng-controller="EventsController" class="jumbotron">
 
 
-
     <div ng-show="vm.status == null" class="spinner-container">
 
         <div class="text-center">
@@ -30,30 +29,35 @@
 
     </div>
 
-
     <div ng-show="vm.status == 'hasdata'">
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h2>Name</h2>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h2>City</h2>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h2>Date</h2>
+            </div>
+            <div class="col-md-3">
+                <h2>Timer</h2>
             </div>
         </div>
 
         <div class="row" ng-repeat="event in vm.localEvents">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 {{event.Name}}
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 {{event.City}}
             </div>
-            <div class="col-md-4">
-                {{event.DateAndTime}}
+            <div class="col-md-3">
+                {{event.DateAndTimeString}}
+            </div>
+            <div class="col-md-3">
+                <div ng-model="event.DateAndTime" countdown-timer-directive></div>
             </div>
         </div>
 

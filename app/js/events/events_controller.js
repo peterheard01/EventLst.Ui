@@ -3,4 +3,12 @@ angular.module('app.controllers').controller('EventsController',
 
 			$scope.vm = EventsViewModel;
 
+			//$(document).ready(function(){
+			//
+			//	alert('dd');
+			//
+			//})
+
+
+
     });
